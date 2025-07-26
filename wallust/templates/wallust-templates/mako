@@ -1,0 +1,15 @@
+background-color={{ background }}99
+text-color={{ foreground }}ff
+border-color={{ color10 | saturate(0.6) }}ff
+border-size=2
+border-radius=4
+padding=10
+margin=20
+font=JetBrainsMono Nerd Font 11
+icons=true
+default-timeout=5000
+max-visible=5
+anchor=top-right
+
+[app-name=Spotify]
+invisible=1
