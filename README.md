@@ -1,6 +1,6 @@
 dis my `.config`. set up for NVIDIA + hyprland.
 
-install hyprland, wallust + all the other shit this `.config` configures. i'll make a list maybe one day.
+install hyprland, wallust, jetbrains mono font + all the other shit this `.config` configures. i'll make a list maybe one day.
 
 edit `hypr/custom/wallpaper_randomiser.sh` to point to your desired wallpaper dir.
 
