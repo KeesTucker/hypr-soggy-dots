@@ -1,0 +1,3 @@
+[submodule "wallust/templates/soggy-gtk"]
+	path = wallust/templates/soggy-gtk
+	url = git@github.com:KeesTucker/wallust-gtk.git
