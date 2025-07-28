@@ -1,9 +1,11 @@
 #!/bin/bash
 
-MAX_FREQ=5150  # Max MHz for scaling bar graph
+MAX_FREQ=4950  # Max MHz for scaling bar graph
 BLOCKS=( ▁ ▂ ▃ ▄ ▅ ▆ ▇ █ )
 
 # Get per-core Avg_MHz with turbostat
+# Give your user permission to run turbostat without requiring sudo
+# yourusername ALL=(ALL) NOPASSWD: /usr/sbin/turbostat
 mapfile -t freqs < <(sudo turbostat --quiet --show Avg_MHz --num_iterations 1 --interval 1 | tail -n +2)
 
 bars=""

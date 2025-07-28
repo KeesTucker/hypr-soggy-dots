@@ -8,11 +8,11 @@ waybar = { src = "waybar-colors.css", dst = "~/.config/waybar/colors.css" }
 @import url("colors.css");
  */
 
-@define-color cursor #A296C7;
-@define-color background #1A191A;
-@define-color text #F0E2E2;
-@define-color disabled #9E8F90;
-@define-color cpu #B76E82;
-@define-color gpu #64A9AF;
-@define-color active #7A73BF;
-@define-color attention #D5ABAD;
+@define-color cursor #B26474;
+@define-color background #0C0000;
+@define-color text #F6ACBB;
+@define-color disabled #A45968;
+@define-color cpu #A45263;
+@define-color gpu #D34261;
+@define-color active #8E4F5D;
+@define-color attention #E71D46;
