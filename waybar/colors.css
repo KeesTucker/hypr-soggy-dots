@@ -8,17 +8,17 @@ waybar = { src = "waybar-colors.css", dst = "~/.config/waybar/colors.css" }
 @import url("colors.css");
  */
 
-@define-color cursor     rgba(198,206,189, 1);
-@define-color background rgba(21,21,23, 1);
-@define-color text       rgba(251,247,250, 1);
-@define-color disabled   rgba(169,165,167, 1);
-@define-color cpu        rgba(161,161,165, 1);
-@define-color gpu        rgba(177,217,101, 1);
-@define-color active     rgba(144,165,129, 1);
-@define-color attention  rgba(244,233,240, 1);
+@define-color cursor     rgba(183,232,217, 1);
+@define-color background rgba(11,0,30, 1);
+@define-color text       rgba(244,252,245, 1);
+@define-color disabled   rgba(162,169,162, 1);
+@define-color cpu        rgba(192,205,253, 1);
+@define-color gpu        rgba(157,240,255, 1);
+@define-color active     rgba(122,212,189, 1);
+@define-color attention  rgba(224,246,225, 1);
 
-@define-color background-alt rgba(44,44,46, 1);
-@define-color cpu-alt        rgba(127,127,130, 1);
-@define-color gpu-alt        rgba(133,163,76, 1);
-@define-color active-alt     rgba(122,137,112, 1);
-@define-color attention-alt  rgba(183,175,180, 1);
+@define-color background-alt rgba(35,26,53, 1);
+@define-color cpu-alt        rgba(144,154,190, 1);
+@define-color gpu-alt        rgba(118,180,191, 1);
+@define-color active-alt     rgba(92,159,142, 1);
+@define-color attention-alt  rgba(168,185,169, 1);

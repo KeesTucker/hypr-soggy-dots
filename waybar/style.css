@@ -98,7 +98,7 @@ window#waybar {
 #custom-cpu_power {
     background-image: linear-gradient(
         to left,
-        @cpu 0,
+        @cpu calc(100% - 10px),
         @cpu-alt
       );
     color: @background;
@@ -112,7 +112,7 @@ window#waybar {
 #custom-gpu_power {
     background-image: linear-gradient(
         to left,
-        @gpu 0,
+        @gpu calc(100% - 10px),
         @gpu-alt
       );
     color: @background;
@@ -121,7 +121,7 @@ window#waybar {
 #custom-mem_util {
     background-image: linear-gradient(
         to left,
-        @background 0,
+        @background calc(100% - 10px),
         @background-alt
       );
 }
@@ -131,7 +131,7 @@ window#waybar {
 #tray {
     background-image: linear-gradient(
         to right,
-        @background 0,
+        @background calc(100% - 10px),
         @background-alt
       );
 }
