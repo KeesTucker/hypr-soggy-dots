@@ -8,11 +8,17 @@ waybar = { src = "waybar-colors.css", dst = "~/.config/waybar/colors.css" }
 @import url("colors.css");
  */
 
-@define-color cursor {{cursor}};
-@define-color background {{background}};
-@define-color text {{foreground}};
-@define-color disabled {{color8}};
-@define-color cpu {{color11}};
-@define-color gpu {{color13}};
-@define-color active {{color10}};
-@define-color attention {{color14}};
+@define-color cursor     rgba({{ cursor     | rgb }}, 1);
+@define-color background rgba({{ background | rgb }}, 1);
+@define-color text       rgba({{ foreground | rgb }}, 1);
+@define-color disabled   rgba({{ color8     | rgb }}, 1);
+@define-color cpu        rgba({{ color11    | rgb }}, 1);
+@define-color gpu        rgba({{ color13    | rgb }}, 1);
+@define-color active     rgba({{ color10    | rgb }}, 1);
+@define-color attention  rgba({{ color14    | rgb }}, 1);
+
+@define-color background-alt rgba({{ background | lighten(0.1) | rgb }}, 1);
+@define-color cpu-alt        rgba({{ color3     | saturate(0.1)  | rgb }}, 1);
+@define-color gpu-alt        rgba({{ color5     | saturate(0.1)  | rgb }}, 1);
+@define-color active-alt     rgba({{ color2     | saturate(0.1)  | rgb }}, 1);
+@define-color attention-alt  rgba({{ color6     | saturate(0.1)  | rgb }}, 1);

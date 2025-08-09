@@ -2,11 +2,11 @@
 {
     "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
-    "margin-top": 10,
-    "margin-left": 10,
-    "margin-right": 10,
-    "margin-bottom": 10,
-    "spacing": 10, // Gaps between modules
+    "margin-top": 0,
+    "margin-left": 0,
+    "margin-right": 0,
+    "margin-bottom": 0,
+    "spacing": 0, // Gaps between modules
     "modules-left": [
       "custom/cpu_temp",
       "custom/cpu_util",
@@ -29,6 +29,73 @@
       "tray"
     ],
     // Modules configuration
+    "custom/cpu_temp": {
+      "format": "{}°C {icon}",
+      "format-icons": [""],
+      "exec": "echo $(( $(cat /sys/class/hwmon/hwmon3/temp1_input) / 1000 ))",
+      "interval": 1
+    },
+    "custom/cpu_util": {
+      "format": "{}% {icon}",
+      "format-icons": [""],
+      "exec": "~/.config/waybar/scripts/cpu_util.sh",
+      "interval": 1
+    },
+    "custom/cpu_clock": {
+      "format": "{} MHz {icon}",
+      "format-icons": [""],
+      "exec": "~/.config/waybar/scripts/cpu_clock.sh",
+      "interval": 1
+    },
+    "custom/cpu_power": {
+      "format": "{} W {icon}",
+      "format-icons": ["⚡"],
+      "exec": "~/.config/waybar/scripts/cpu_power.sh",
+      "interval": 1
+    },
+    "custom/gpu_temp": {
+      "format": "{}°C {icon}",
+      "format-icons": [""],
+      "exec": "nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader,nounits",
+      "interval": 1
+    },
+    "custom/gpu_util": {
+      "format": "{}% {icon}",
+      "format-icons": ["󰢮"],
+      "exec": "~/.config/waybar/scripts/gpu_util.sh",
+      "interval": 1
+    },
+    "custom/gpu_clock": {
+      "format": "{} MHz {icon}",
+      "format-icons": [""],
+      "exec": "~/.config/waybar/scripts/gpu_clock.sh",
+      "interval": 1
+    },
+    "custom/gpu_vram_util": {
+      "format": "{} MiB {icon}",
+      "format-icons": [""],
+      "exec": "~/.config/waybar/scripts/gpu_vram_util.sh",
+      "interval": 1
+    },
+    "custom/gpu_vram_clock": {
+      "format": "{} MHz {icon}",
+      "format-icons": [""],
+      "exec": "~/.config/waybar/scripts/gpu_vram_clock.sh",
+      "interval": 1
+    },
+    "custom/gpu_power": {
+      "format": "{} W {icon}",
+      "format-icons": ["⚡"],
+      "exec": "~/.config/waybar/scripts/gpu_power.sh",
+      "interval": 1
+    },
+    "custom/mem_util": {
+      "format": "{} MiB {icon}",
+      "format-icons": [""],
+      "exec": "~/.config/waybar/scripts/mem_util.sh",
+      "interval": 1
+    },
+
     "hyprland/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
@@ -47,79 +114,10 @@
           "default": ""
         }
     },
-    "tray": {
-        "icon-size": 16,
-        "spacing": 10
-    },
+
     "clock": {
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
-    },
-    "custom/cpu_util": {
-      "format": "{}% {icon}",
-      "format-icons": [""],
-      "exec": "~/.config/waybar/scripts/cpu_util.sh",
-      "interval": 1
-    },
-    "custom/cpu_temp": {
-      "format": "{}°C {icon}",
-      "format-icons": [""],
-      "exec": "echo $(( $(cat /sys/class/hwmon/hwmon3/temp1_input) / 1000 ))",
-      "interval": 1
-    },
-    "custom/cpu_clock": {
-      "format": "{} MHz {icon}",
-      "format-icons": [""],
-      "exec": "~/.config/waybar/scripts/cpu_clock.sh",
-      "interval": 1
-    },
-    "custom/cpu_power": {
-      "format": "{} W {icon}",
-      "format-icons": ["⚡"],
-      "exec": "~/.config/waybar/scripts/cpu_power.sh",
-      "interval": 1
-    },
-    "custom/mem_util": {
-      "format": "{} MiB {icon}",
-      "format-icons": [""],
-      "exec": "~/.config/waybar/scripts/mem_util.sh",
-      "interval": 1
-    },
-    "custom/gpu_util": {
-      "format": "{}% {icon}",
-      "format-icons": ["󰢮"],
-      "exec": "~/.config/waybar/scripts/gpu_util.sh",
-      "interval": 1
-    },
-    "custom/gpu_temp": {
-      "format": "{}°C {icon}",
-      "format-icons": [""],
-      "exec": "nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader,nounits",
-      "interval": 1
-    },
-    "custom/gpu_clock": {
-      "format": "{} MHz {icon}",
-      "format-icons": [""],
-      "exec": "~/.config/waybar/scripts/gpu_clock.sh",
-      "interval": 1
-    },
-    "custom/gpu_power": {
-      "format": "{} W {icon}",
-      "format-icons": ["⚡"],
-      "exec": "~/.config/waybar/scripts/gpu_power.sh",
-      "interval": 1
-    },
-    "custom/gpu_vram_util": {
-      "format": "{} MiB {icon}",
-      "format-icons": [""],
-      "exec": "~/.config/waybar/scripts/gpu_vram_util.sh",
-      "interval": 1
-    },
-    "custom/gpu_vram_clock": {
-      "format": "{} MHz {icon}",
-      "format-icons": [""],
-      "exec": "~/.config/waybar/scripts/gpu_vram_clock.sh",
-      "interval": 1
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
@@ -139,5 +137,9 @@
             "default": ["", "", ""]
         },
         "on-click": "pavucontrol"
+    },
+    "tray": {
+        "icon-size": 16,
+        "spacing": 10
     }
 }
