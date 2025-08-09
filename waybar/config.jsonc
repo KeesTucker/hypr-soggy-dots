@@ -2,9 +2,10 @@
 {
     "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
-    "margin-top": 20,
-    "margin-left": 20,
-    "margin-right": 20,
+    "margin-top": 10,
+    "margin-left": 10,
+    "margin-right": 10,
+    "margin-bottom": 10,
     "spacing": 10, // Gaps between modules
     "modules-left": [
       "custom/cpu_temp",

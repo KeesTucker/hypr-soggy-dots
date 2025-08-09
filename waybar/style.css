@@ -18,7 +18,6 @@
 
 window#waybar {
     background-color: rgba(0, 0, 0, 0);
-    border-radius: 4px;
     color: @text;
     transition-property: background-color;
     transition-duration: 0.5s;
@@ -34,7 +33,6 @@ window#waybar {
     background-color: @background;
     padding-left: 10px;
     padding-right: 10px;
-    border-radius: 4px;
 }
 
 #workspaces button {
@@ -47,7 +45,6 @@ window#waybar {
     transition: background-color 0.3s ease;
     margin-left: 5px;
     margin-right: 5px;
-    border-radius: 50%;
 }
 
 #workspaces button:hover {
@@ -83,7 +80,6 @@ window#waybar {
     padding: 5px;
     padding-left: 8px;
     padding-right: 8px;
-    border-radius: 4px;
 }
 
 #custom-cpu_temp,
