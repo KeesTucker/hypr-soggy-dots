@@ -17,7 +17,7 @@
 }
 
 window#waybar {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.5);
     color: @text;
     transition-property: background-color;
     transition-duration: 0.5s;
@@ -35,12 +35,8 @@ window#waybar {
 }
 
 #workspaces button {
-    background-image: linear-gradient(
-        to right,
-        @background 0,
-        @background-alt
-      );
-    transition: background-image 0.5s ease;
+    transition: color .5s ease, border-bottom-color .5s ease;
+    border-bottom: 4px solid @text;
     color: @text;
     min-width: 30px;
     padding: 10px;
@@ -52,25 +48,18 @@ window#waybar {
 }
 
 #workspaces button:hover {
-    background: rgba(0, 0, 0, 0.2);
+    border-bottom-color: @attention;
+    color: @attention;
 }
 
 #workspaces button.active {
-    background-image: linear-gradient(
-        to right,
-        @active 0,
-        @active-alt
-      );
-    color: @background;
+    border-bottom-color: @active;
+    color: @active;
 }
 
 #workspaces button.urgent {
-    background-image: linear-gradient(
-        to right,
-        @attention 0,
-        @attention-alt
-      );
-    color: @background;
+    border-bottom-color: @attention;
+    color: @attention;
 }
 
 #custom-cpu_temp,
@@ -87,6 +76,7 @@ window#waybar {
 #clock,
 #pulseaudio,
 #tray {
+    border-bottom: 3px solid @text;
     padding: 15px;
     padding-left: 18px;
     padding-right: 18px;
@@ -96,12 +86,7 @@ window#waybar {
 #custom-cpu_util,
 #custom-cpu_clock,
 #custom-cpu_power {
-    background-image: linear-gradient(
-        to left,
-        @cpu calc(100% - 10px),
-        @cpu-alt
-      );
-    color: @background;
+    border-bottom-color: @cpu;
 }
 
 #custom-gpu_util,
@@ -110,34 +95,21 @@ window#waybar {
 #custom-gpu_vram_util,
 #custom-gpu_vram_clock,
 #custom-gpu_power {
-    background-image: linear-gradient(
-        to left,
-        @gpu calc(100% - 10px),
-        @gpu-alt
-      );
-    color: @background;
+    border-bottom-color: @gpu;
 }
 
 #custom-mem_util {
-    background-image: linear-gradient(
-        to left,
-        @background calc(100% - 10px),
-        @background-alt
-      );
+    border-bottom-color: @background;
 }
 
 #clock,
 #pulseaudio,
 #tray {
-    background-image: linear-gradient(
-        to right,
-        @background calc(100% - 10px),
-        @background-alt
-      );
+    border-bottom-color: @background;
 }
 
 #pulseaudio.muted {
-    background-color: @disabled;
+    border-bottom-color: @disabled;
 }
 
 #tray > .passive {
@@ -146,5 +118,5 @@ window#waybar {
 
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
-    background-color: @attention;
+    border-bottom-color: @attention;
 }
