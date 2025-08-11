@@ -6,7 +6,7 @@
     "margin-left": 0,
     "margin-right": 0,
     "margin-bottom": 0,
-    "spacing": 0, // Gaps between modules
+    "spacing": 4, // Gaps between modules
     "modules-left": [
       "custom/cpu_temp",
       "custom/cpu_util",
