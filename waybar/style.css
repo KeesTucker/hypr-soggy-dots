@@ -93,13 +93,13 @@ window#waybar {
 }
 
 #custom-mem_util {
-    border-bottom-color: @background;
+    border-bottom-color: @text;
 }
 
 #clock,
 #pulseaudio,
 #tray {
-    border-bottom-color: @background;
+    border-bottom-color: @text;
 }
 
 #pulseaudio.muted {
