@@ -72,8 +72,8 @@ window#waybar {
 #tray {
     border-bottom: 3px solid @text;
     padding: 10px;
-    padding-left: 18px;
-    padding-right: 18px;
+    padding-left: 12px;
+    padding-right: 12px;
 }
 
 #custom-cpu_temp,
