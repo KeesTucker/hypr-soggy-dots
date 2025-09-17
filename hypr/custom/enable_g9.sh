@@ -1,13 +1,15 @@
 #!/bin/bash
 
-config_file="$HOME/.config/hypr/hyprland.conf"
+configuration_file="$HOME/.config/hypr/hyprland.conf"
 
-# Uncomment Standard mode monitors (lines 7-8)
-sed -i '6s/^# *//;7s/^# *//' "$config_file"
+# Uncomment standard mode monitors
+sed -E -i 's/^#\s*(monitor = DP-1, 5120x1440@239\.76, 0x0, 1, bitdepth, [0-9]+, cm, srgb, vrr, [01])/\1/' "$configuration_file"
+sed -E -i 's/^#\s*(monitor = HDMI-A-1, disabled)/\1/' "$configuration_file"
 
-# Comment out Sunshine mode monitors (lines 10-11)
-sed -i '9s/^[^#]/# &/;10s/^[^#]/# &/' "$config_file"
+# Comment out Sunshine mode monitors
+sed -E -i 's/^\s*(monitor = DP-1, disabled)/# \1/' "$configuration_file"
+sed -E -i 's/^\s*(monitor = HDMI-A-1, 3840x2160@60, auto, 1, bitdepth, [0-9]+, cm, srgb)/# \1/' "$configuration_file"
 
-echo "Switched to Standard monitor configuration."
+echo "Switched to standard monitor configuration."
 
 hyprctl reload
