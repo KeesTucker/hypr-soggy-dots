@@ -17,7 +17,7 @@
 }
 
 window#waybar {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 1);
     color: @text;
     transition-property: background-color;
     transition-duration: 0.5s;
@@ -30,8 +30,7 @@ window#waybar {
 }
 
 #workspaces button {
-    transition: color .5s ease, border-bottom-color .5s ease;
-    border-bottom: 4px solid @text;
+    transition: color .5s ease;
     color: @text;
     min-width: 30px;
     padding: 5px;
@@ -42,17 +41,14 @@ window#waybar {
 }
 
 #workspaces button:hover {
-    border-bottom-color: @attention;
     color: @attention;
 }
 
 #workspaces button.active {
-    border-bottom-color: @active;
     color: @active;
 }
 
 #workspaces button.urgent {
-    border-bottom-color: @attention;
     color: @attention;
 }
 
@@ -70,7 +66,6 @@ window#waybar {
 #clock,
 #pulseaudio,
 #tray {
-    border-bottom: 3px solid @text;
     padding: 10px;
     padding-left: 12px;
     padding-right: 12px;
@@ -80,7 +75,7 @@ window#waybar {
 #custom-cpu_util,
 #custom-cpu_clock,
 #custom-cpu_power {
-    border-bottom-color: @cpu;
+    color: @cpu;
 }
 
 #custom-gpu_util,
@@ -89,21 +84,21 @@ window#waybar {
 #custom-gpu_vram_util,
 #custom-gpu_vram_clock,
 #custom-gpu_power {
-    border-bottom-color: @gpu;
+    color: @gpu;
 }
 
 #custom-mem_util {
-    border-bottom-color: @text;
+    color: @text;
 }
 
 #clock,
 #pulseaudio,
 #tray {
-    border-bottom-color: @text;
+    color: @text;
 }
 
 #pulseaudio.muted {
-    border-bottom-color: @disabled;
+    color: @disabled;
 }
 
 #tray > .passive {
@@ -112,5 +107,5 @@ window#waybar {
 
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
-    border-bottom-color: @attention;
+    color: @attention;
 }
